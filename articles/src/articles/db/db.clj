@@ -22,7 +22,6 @@
      (jdbc/with-db-transaction [t-con db]
                                (jdbc/execute! t-con query))
      (catch Exception e
-       (println (type e))
        (log/errorf "Exception occured while inserting articles: %s" (ex-message e))
        (throw e)))))
 

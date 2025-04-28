@@ -1,0 +1,27 @@
+version: "2.4"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "articles_backend:latest"
+    ports:
+      - "5000:5000"
+    networks:
+      - articles-network
+    environment:
+      - http.host=0.0.0.0
+      - http.port=5000
+  frontend:
+    build:
+      context: ../articles-frontend/
+      dockerfile: Dockerfile
+    image: "articles_frontend:latest"
+    ports:
+      - "8080:8080"
+    networks:
+      - articles-network
+
+networks:
+  articles-network:
+    driver: bridge
