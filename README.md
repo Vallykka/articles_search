@@ -3,6 +3,7 @@ This app searches articles from Scopus API, you can watch result in table.
 You can request either single term or collocation.
 
 For now local setup is supported
+
 1.We need to generate node_modules 
 run 'npm install' in articles_frontend
 
