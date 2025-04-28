@@ -1,0 +1,1 @@
+create unique index doi_idx ON article(doi);
