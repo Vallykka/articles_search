@@ -1,0 +1,12 @@
+{:db {:adapter  "h2"
+      :url      "jdbc:h2:mem:demo;DB_CLOSE_DELAY=-1"
+      :username "sa"
+      :password ""
+      :minimum-idle       10
+      :maximum-pool-size  10}
+ :migratus {:store :database
+            :migration-dir "migrations"}
+ :scopus {:url "https://api.elsevier.com/content/search/scopus"
+          :api-key "7f59af901d2d86f78a1fd60c1bf9426a"}
+ :server {:port 5000
+          :join? false}}
